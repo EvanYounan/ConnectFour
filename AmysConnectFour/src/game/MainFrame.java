@@ -13,8 +13,27 @@ public class MainFrame {
 		
 		temporary tempPanel = new temporary();
 		
+
+		
 		f.add(tempPanel);
-		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.setVisible(true);
+		
+		tempPanel.setY(0);
+		
+		for (int i = 0; i < 315; i = i+5) {
+			try {
+				tempPanel.y = i;
+				tempPanel.repaint();
+				Thread.sleep(15);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		
+		
 	}
 }

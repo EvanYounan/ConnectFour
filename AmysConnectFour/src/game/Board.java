@@ -103,10 +103,29 @@ public class Board {
 		return tempBoard;
 	}
 	
+	public String toString() {
+		return getBoard().toString();
+	}
+	
 	
 	public static void main(String[] args) {
 		Board board = new Board();
 		Player player1 = new Player("Amy", 1);
+		
+		board.insert(player1, 1);
+		board.insert(player1, 1);
+		board.insert(player1, 1);
+		board.insert(player1, 1);
+		board.insert(player1, 1);
+		board.insert(player1, 1);
+
+		
+		//will evaluate to false since there isn't a horizontal line beginning
+		// from the topmost circle in the 1st column (at height 6)
+		System.out.println(board.wonHorizontal(player1, 1));
+		//will evaluate to true since there is a vertical line of 1s
+		// in the first column
+		System.out.println(board.wonVertical(player1, 1));
 		
 		
 		
