@@ -60,15 +60,14 @@ public class Board {
 		
 		int subsequentValues = 0;
 		for (int i = 0; i < temp.length; i++) {
+			if (temp[i] == p.colour) {
+				subsequentValues++;
+			} else {
+				subsequentValues = 0;
+			}
 			if (subsequentValues == 4) {
 				return true;
-			} else {
-				if (temp[i] == p.colour) {
-					subsequentValues++;
-				} else {
-					subsequentValues = 0;
-				}
-			}	
+			}
 		}
 		return false;	
 	}
@@ -82,15 +81,14 @@ public class Board {
 		
 		int subsequentValues = 0;
 		for (int i = 0; i < temp.length; i++) {
+			if (temp[i] == p.colour) {
+				subsequentValues++;
+			} else {
+				subsequentValues = 0;
+			}
 			if (subsequentValues == 4) {
 				return true;
-			} else {
-				if (temp[i] == p.colour) {
-					subsequentValues++;
-				} else {
-					subsequentValues = 0;
-				}
-			}	
+			}
 		}
 		return false;
 	}
